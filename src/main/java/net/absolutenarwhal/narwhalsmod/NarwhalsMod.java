@@ -1,5 +1,6 @@
 package net.absolutenarwhal.narwhalsmod;
 
+import net.absolutenarwhal.narwhalsmod.item.ModItemGroups;
 import net.absolutenarwhal.narwhalsmod.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
@@ -13,7 +14,7 @@ public class NarwhalsMod implements ModInitializer {
 
 	@Override
 	public void onInitialize(){
-
+		ModItemGroups.registerItemGroups();
 		ModItems.registerModItems();
 	}
 }

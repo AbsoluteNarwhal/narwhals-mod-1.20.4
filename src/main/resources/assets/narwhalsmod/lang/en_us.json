@@ -1,3 +1,5 @@
 {
-  "item.narwhalsmod.testitem": "Test Item"
+  "item.narwhalsmod.testitem": "Test Item",
+
+  "itemgroup.testitem": "Narwhal's Mod"
 }
