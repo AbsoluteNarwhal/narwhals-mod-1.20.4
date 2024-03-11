@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "narwhalsmod",
+	"version": "${version}",
+	"name": "Narwhal's Mod",
+	"description": "A mod about progression and exploration.",
+	"authors": [
+		"AbsoluteNarwhal"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/narwhalsmod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.absolutenarwhal.narwhalsmod.NarwhalsMod"
+		],
+		"client": [
+			"net.absolutenarwhal.narwhalsmod.NarwhalsModClient"
+		],
+		"fabric-datagen": [
+			"net.absolutenarwhal.narwhalsmod.NarwhalsModDataGenerator"
+		]
+	},
+	"mixins": [
+		"narwhalsmod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.7",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
