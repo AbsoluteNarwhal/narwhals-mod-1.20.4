@@ -2,6 +2,7 @@ package net.absolutenarwhal.narwhalsmod.block;
 
 import net.absolutenarwhal.narwhalsmod.NarwhalsMod;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -16,6 +17,11 @@ public class ModBlocks {
 
     public static final Block PEAT = registerBlock("peat",
             new Block(FabricBlockSettings.copyOf(Blocks.DIRT).sounds(BlockSoundGroup.MUDDY_MANGROVE_ROOTS)));
+
+    public static void addItemsToNaturalItemGroup(FabricItemGroupEntries entries)
+    {
+        entries.add(PEAT);
+    }
 
     private static Block registerBlock(String name, Block block)
     {

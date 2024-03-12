@@ -1,6 +1,7 @@
 package net.absolutenarwhal.narwhalsmod.item;
 
 import net.absolutenarwhal.narwhalsmod.NarwhalsMod;
+import net.absolutenarwhal.narwhalsmod.block.ModBlocks;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -14,16 +15,11 @@ import static net.absolutenarwhal.narwhalsmod.block.ModBlocks.PEAT;
 
 public class ModItems {
 
-    public static final Item SOULMANUSCRIPT = registerItem("soulmanuscript", new Item(new FabricItemSettings()));
+    public static final Item SOUL_MANUSCRIPT = registerItem("soul_manuscript", new Item(new FabricItemSettings()));
 
     private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries)
     {
-        entries.add(SOULMANUSCRIPT);
-    }
-
-    private static void addItemsToNaturalItemGroup(FabricItemGroupEntries entries)
-    {
-        entries.add(PEAT);
+        entries.add(SOUL_MANUSCRIPT);
     }
 
     private static Item registerItem(String name, Item item)
@@ -36,7 +32,7 @@ public class ModItems {
         NarwhalsMod.LOGGER.info("Registering Mod Items for " + NarwhalsMod.MOD_ID );
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(ModItems::addItemsToIngredientItemGroup);
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(ModItems::addItemsToNaturalItemGroup);
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(ModBlocks::addItemsToNaturalItemGroup);
     }
 
 }

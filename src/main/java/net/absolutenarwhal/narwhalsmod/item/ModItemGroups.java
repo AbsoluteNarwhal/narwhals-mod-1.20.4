@@ -16,8 +16,8 @@ public class ModItemGroups
     public static final ItemGroup NARWHALSMOD_GROUP = Registry.register(Registries.ITEM_GROUP,
             new Identifier(NarwhalsMod.MOD_ID, "narwhalsmodgroup"),
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.narwhalsmodgroup"))
-                    .icon(() -> new ItemStack(ModItems.SOULMANUSCRIPT)).entries((displayContext, entries) -> {
-                        entries.add(ModItems.SOULMANUSCRIPT);
+                    .icon(() -> new ItemStack(ModItems.SOUL_MANUSCRIPT)).entries((displayContext, entries) -> {
+                        entries.add(ModItems.SOUL_MANUSCRIPT);
                         entries.add(ModBlocks.PEAT);
                     }).build());
 
