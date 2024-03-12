@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "narwhalsmod:item/testitem"
+    "layer0": "narwhalsmod:item/soulmanuscript"
   }
 }

@@ -13,10 +13,10 @@ public class ModItemGroups
 {
 
     public static final ItemGroup NARWHALSMOD_GROUP = Registry.register(Registries.ITEM_GROUP,
-            new Identifier(NarwhalsMod.MOD_ID, "testitem"),
-            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.testitem"))
-                    .icon(() -> new ItemStack(ModItems.TESTITEM)).entries((displayContext, entries) -> {
-                        entries.add(ModItems.TESTITEM);
+            new Identifier(NarwhalsMod.MOD_ID, "narwhalsmodgroup"),
+            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.narwhalsmodgroup"))
+                    .icon(() -> new ItemStack(ModItems.SOULMANUSCRIPT)).entries((displayContext, entries) -> {
+                        entries.add(ModItems.SOULMANUSCRIPT);
                     }).build());
 
     public static void registerItemGroups()

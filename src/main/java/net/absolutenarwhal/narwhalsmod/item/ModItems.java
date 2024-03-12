@@ -12,11 +12,11 @@ import net.minecraft.util.Identifier;
 
 public class ModItems {
 
-    public static final Item TESTITEM = registerItem("testitem", new Item(new FabricItemSettings()));
+    public static final Item SOULMANUSCRIPT = registerItem("soulmanuscript", new Item(new FabricItemSettings()));
 
     private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries)
     {
-        entries.add(TESTITEM);
+        entries.add(SOULMANUSCRIPT);
     }
 
     private static Item registerItem(String name, Item item)
