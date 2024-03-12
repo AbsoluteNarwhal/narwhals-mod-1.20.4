@@ -10,6 +10,8 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
+import static net.absolutenarwhal.narwhalsmod.block.ModBlocks.PEAT;
+
 public class ModItems {
 
     public static final Item SOULMANUSCRIPT = registerItem("soulmanuscript", new Item(new FabricItemSettings()));
@@ -17,6 +19,11 @@ public class ModItems {
     private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries)
     {
         entries.add(SOULMANUSCRIPT);
+    }
+
+    private static void addItemsToNaturalItemGroup(FabricItemGroupEntries entries)
+    {
+        entries.add(PEAT);
     }
 
     private static Item registerItem(String name, Item item)
@@ -29,6 +36,7 @@ public class ModItems {
         NarwhalsMod.LOGGER.info("Registering Mod Items for " + NarwhalsMod.MOD_ID );
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(ModItems::addItemsToIngredientItemGroup);
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(ModItems::addItemsToNaturalItemGroup);
     }
 
 }
